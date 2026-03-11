@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Garden — Case | Julyana Lima</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Mesmo CSS do index -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- (Opcional) CSS pequeno só pra galeria; se quiser, mova pro style.css -->
+  <style>
+    .phone-frame{ aspect-ratio: 9/19.5; border-radius: 1rem; overflow: hidden; background: rgba(0,0,0,.04); }
+    .phone-frame img{ width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gallery-btn{ border: none; background: transparent; padding: 0; text-align: left; width: 100%; }
+    .modal-img{ max-height: 82vh; width: auto; display: block; margin: 0 auto; border-radius: 1rem; }
+  </style>
+</head>
+
+<body>
+  <main class="container py-5">
+
+    <!-- TOP (igual feeling do index) -->
+    <div class="d-flex justify-content-between align-items-center mb-5">
+      <h1 class="h3 fw-bold mb-0">Smart Garden</h1>
+      <div class="d-flex gap-2">
+        <a class="btn btn-ghost" href="index.html">Voltar</a>
+        <a class="btn btn-accent" href="#telas">Telas</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="row g-4 align-items-center mb-5">
+      <div class="col-lg-7">
+        <span class="badge rounded-pill badge-accent mb-3">TCC • UI/UX • Mobile • IoT</span>
+
+        <h2 class="display-6 fw-bold mb-3">Monitoramento inteligente de plantas</h2>
+
+        <p class="text-secondary-emphasis mb-4" style="max-width: 62ch;">
+          Sistema IoT para monitoramento inteligente de plantas, com dados em tempo real,
+          alertas e identificação de plantas por IA.
+        </p>
+
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-accent" href="#visao-geral">Visão geral</a>
+          <a class="btn btn-ghost" href="#telas">Ver telas</a>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card card-soft p-4 lift">
+          <h3 class="h5 fw-bold mb-2">Destaque</h3>
+          <p class="mb-0 text-secondary-emphasis">
+            Transformei dados técnicos (sensores/IoT) em informações simples e acionáveis
+            para usuários iniciantes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISÃO GERAL (cards iguais ao index) -->
+    <section id="visao-geral" class="mb-5">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card card-soft p-4 h-100 lift">
+            <div class="text-secondary small mb-1">Meu papel</div>
+            <div class="fw-semibold">UI/UX + Front-end (Flutter)</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-soft p-4 h-100 lift">
+            <div class="text-secondary small mb-1">Stack</div>
+            <div class="fw-semibold">Flutter • Firebase • ESP32 • Sensores</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-soft p-4 h-100 lift">
+            <div class="text-secondary small mb-1">Entregas</div>
+            <div class="fw-semibold">Protótipo • App • Integração IoT</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEXTO -->
+    <section class="mb-5">
+      <div class="card card-soft p-4 lift">
+        <h3 class="h4 fw-bold mb-3">Contexto</h3>
+        <p class="mb-0 text-secondary-emphasis">
+          Jardineiros iniciantes costumam ter dificuldade para entender as necessidades de cada planta
+          e manter consistência nos cuidados. O Smart Garden resolve isso com monitoramento ambiental
+          e recomendações no app.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROBLEMA / OBJETIVOS -->
+    <section class="row g-3 mb-5">
+      <div class="col-lg-6">
+        <div class="card card-soft p-4 h-100 lift">
+          <h3 class="h4 fw-bold mb-3">Problema</h3>
+          <ul class="mb-0 text-secondary-emphasis">
+            <li>Dificuldade em identificar necessidades específicas de cada planta</li>
+            <li>Monitoramento manual e inconsistente</li>
+            <li>Falta de rotina e interpretação de sinais de problemas</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card card-soft p-4 h-100 lift">
+          <h3 class="h4 fw-bold mb-3">Objetivos</h3>
+          <ul class="mb-0 text-secondary-emphasis">
+            <li>Monitorar condições ambientais em tempo real</li>
+            <li>Integrar sensores + ESP32 com app mobile</li>
+            <li>Exibir dados com clareza e gerar alertas</li>
+            <li>Ajudar no cuidado com orientações e boas práticas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNCIONALIDADES -->
+    <section class="mb-5">
+      <div class="d-flex align-items-end justify-content-between mb-3">
+        <h3 class="h4 fw-bold mb-0">Principais funcionalidades</h3>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Dashboard + favoritos</div>
+            <div class="text-secondary-emphasis">Visão geral rápida das plantas e status.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Detalhes + sensores</div>
+            <div class="text-secondary-emphasis">Dados exibidos de forma visual e clara.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Notificações</div>
+            <div class="text-secondary-emphasis">Alertas para agir antes de a planta sofrer.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Identificação por IA</div>
+            <div class="text-secondary-emphasis">Scan para reconhecer a planta e sugerir cuidados.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="telas" class="mb-5">
+      <div class="d-flex align-items-end justify-content-between mb-2">
+        <h3 class="h4 fw-bold mb-0">Protótipos (telas)</h3>
+        <span class="text-secondary small">Clique para ampliar</span>
+      </div>
+
+      <div class="row g-3">
+
+        <!-- CARD -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/smart-garden/boas-vindas.jpg" data-title="Boas-vindas">
+            <div class="card card-soft p-2 lift">
+              <div class="phone-frame">
+                <img src="./assets/smart-garden/boas-vindas.jpg" alt="Boas-vindas">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Boas-vindas</span>
+                <span class="badge rounded-pill badge-accent">Onboarding</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/smart-garden/login.png" data-title="Login">
+            <div class="card card-soft p-2 lift">
+              <div class="phone-frame">
+                <img src="./assets/smart-garden/login.png" alt="Login">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Login</span>
+                <span class="badge rounded-pill badge-accent">Auth</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/smart-garden/cadastro.png" data-title="Cadastro">
+            <div class="card card-soft p-2 lift">
+              <div class="phone-frame">
+                <img src="./assets/smart-garden/cadastro.png" alt="Cadastro">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Cadastro</span>
+                <span class="badge rounded-pill badge-accent">Auth</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/smart-garden/visao-geral.png" data-title="Visão geral">
+            <div class="card card-soft p-2 lift">
+              <div class="phone-frame">
+                <img src="./assets/smart-garden/visao-geral.png" alt="Visão geral">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Visão geral</span>
+                <span class="badge rounded-pill badge-accent">Home</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/smart-garden/minhas-plantas.png" data-title="Minhas plantas">
+            <div class="card card-soft p-2 lift">
+              <div class="phone-frame">
+                <img src="./assets/smart-garden/minhas-plantas.png" alt="Minhas plantas">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Minhas plantas</span>
+                <span class="badge rounded-pill badge-accent">List</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/smart-garden/scan.png" data-title="Scan">
+            <div class="card card-soft p-2 lift">
+              <div class="phone-frame">
+                <img src="./assets/smart-garden/scan.png" alt="Scan">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Scan</span>
+                <span class="badge rounded-pill badge-accent">IA</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/smart-garden/detalhes.png" data-title="Detalhes">
+            <div class="card card-soft p-2 lift">
+              <div class="phone-frame">
+                <img src="./assets/smart-garden/detalhes.png" alt="Detalhes">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Detalhes</span>
+                <span class="badge rounded-pill badge-accent">Sensores</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/smart-garden/notificacoes.png" data-title="Notificações">
+            <div class="card card-soft p-2 lift">
+              <div class="phone-frame">
+                <img src="./assets/smart-garden/notificacoes.png" alt="Notificações">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Notificações</span>
+                <span class="badge rounded-pill badge-accent">Alertas</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESULTADOS -->
+    <section class="mb-5">
+      <div class="card card-soft p-4 lift">
+        <h3 class="h4 fw-bold mb-3">Resultados e aprendizados</h3>
+        <ul class="mb-0 text-secondary-emphasis">
+          <li>Integração hardware + app validada em testes internos</li>
+          <li>Melhoria na clareza da informação (dados → ação)</li>
+          <li>Aprendizado em UI para dados IoT e consistência visual</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer py-4 text-center">
+      <span class="text-secondary small">© 2026 — Julyana Lima</span>
+    </footer>
+
+  </main>
+
+  <!-- Modal -->
+  <!-- Modal -->
+<div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content border-0 card-soft position-relative" style="border-radius: 1rem;">
+      <button type="button"
+              class="btn-close position-absolute top-0 end-0 m-3"
+              data-bs-dismiss="modal"></button>
+      <button id="prevBtn"
+              class="gallery-nav left">
+        ❮
+      </button>
+      <button id="nextBtn"
+              class="gallery-nav right">
+        ❯
+      </button>
+      <div class="modal-body text-center py-5">
+        <h5 class="fw-bold mb-4" id="imgTitle">Imagem</h5>
+        <img id="imgPreview" class="modal-img" src="" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById('imgModal');
+  const imgPreview = document.getElementById('imgPreview');
+  const imgTitle = document.getElementById('imgTitle');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const galleryItems = Array.from(document.querySelectorAll('.gallery-btn'));
+  let currentIndex = 0;
+
+  function showImage(index) {
+    const btn = galleryItems[index];
+    const src = btn.getAttribute('data-img');
+    const title = btn.getAttribute('data-title');
+
+    imgPreview.src = src;
+    imgPreview.alt = title;
+    imgTitle.textContent = title;
+  }
+  modal.addEventListener('show.bs.modal', function (event) {
+    const clickedBtn = event.relatedTarget;
+    currentIndex = galleryItems.indexOf(clickedBtn);
+    showImage(currentIndex);
+  });
+
+  prevBtn.addEventListener('click', function () {
+    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    showImage(currentIndex);
+  });
+  nextBtn.addEventListener('click', function () {
+    currentIndex = (currentIndex + 1) % galleryItems.length;
+    showImage(currentIndex);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (!modal.classList.contains('show')) return;
+    if (e.key === "ArrowRight") {
+      nextBtn.click();
+    }
+    if (e.key === "ArrowLeft") {
+      prevBtn.click();
+    }
+  });
+
+});
+</script>
+  </script>
+</body>
+</html>
