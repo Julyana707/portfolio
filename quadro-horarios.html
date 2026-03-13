@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quadro de Horários Inteligente — Case | Julyana Lima</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    .screen-frame {
+      aspect-ratio: 16 / 10;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: rgba(0,0,0,.04);
+    }
+
+    .screen-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-btn {
+      border: none;
+      background: transparent;
+      padding: 0;
+      text-align: left;
+      width: 100%;
+    }
+
+    .modal-img {
+      max-height: 82vh;
+      max-width: 100%;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 1rem;
+    }
+
+    .gallery-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.45);
+      color: white;
+      border: none;
+      font-size: 2rem;
+      line-height: 1;
+      padding: 0.6rem 0.9rem;
+      border-radius: 999px;
+      cursor: pointer;
+      z-index: 10;
+      transition: 0.2s ease;
+    }
+
+    .gallery-nav:hover {
+      background: rgba(0,0,0,0.7);
+    }
+
+    .gallery-nav.left {
+      left: 20px;
+    }
+
+    .gallery-nav.right {
+      right: 20px;
+    }
+
+    .gallery-counter {
+      font-size: 0.95rem;
+      color: #6c757d;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container py-5">
+
+    <!-- TOPO -->
+    <div class="d-flex justify-content-between align-items-center mb-5">
+      <h1 class="h3 fw-bold mb-0">Quadro de Horários Inteligente</h1>
+      <div class="d-flex gap-2">
+        <a class="btn btn-ghost" href="index.html">Voltar</a>
+        <a class="btn btn-accent" href="#telas">Ver telas</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="row g-4 align-items-center mb-5">
+      <div class="col-lg-7">
+        <span class="badge rounded-pill badge-accent mb-3">Acadêmico • UI/UX • Sistema Web</span>
+
+        <h2 class="display-6 fw-bold mb-3">Sistema inteligente para elaboração de quadros de horários acadêmicos</h2>
+
+        <p class="text-secondary-emphasis mb-4" style="max-width: 62ch;">
+          Projeto acadêmico em grupo desenvolvido para apoiar a coordenação da UniNorte na montagem
+          de horários acadêmicos, reduzindo o tempo do processo manual, minimizando conflitos
+          e organizando melhor a alocação de turmas, professores e disciplinas.
+        </p>
+
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-accent" href="#visao-geral">Visão geral</a>
+          <a class="btn btn-ghost" href="#telas">Protótipos</a>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card card-soft p-4 lift">
+          <h3 class="h5 fw-bold mb-2">Destaque</h3>
+          <p class="mb-0 text-secondary-emphasis">
+            Atuei em UI/UX em um sistema pensado para automatizar uma tarefa crítica da gestão acadêmica,
+            transformando um processo manual e demorado em uma experiência mais clara, centralizada e eficiente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISÃO GERAL -->
+    <section id="visao-geral" class="mb-5">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card card-soft p-4 h-100 lift">
+            <div class="text-secondary small mb-1">Meu papel</div>
+            <div class="fw-semibold">UI/UX + apoio em requisitos</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-soft p-4 h-100 lift">
+            <div class="text-secondary small mb-1">Ferramentas / stack do projeto</div>
+            <div class="fw-semibold">Figma • Vue.js • Laravel • Firebase</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-soft p-4 h-100 lift">
+            <div class="text-secondary small mb-1">Projeto</div>
+            <div class="fw-semibold">Acadêmico em grupo • UniNorte</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEXTO -->
+    <section class="mb-5">
+      <div class="card card-soft p-4 lift">
+        <h3 class="h4 fw-bold mb-3">Contexto</h3>
+        <p class="mb-0 text-secondary-emphasis">
+          A documentação do projeto descreve que a elaboração dos quadros de horários acadêmicos era feita
+          manualmente com apoio de ferramentas como Excel e Word, envolvendo 17 turmas distribuídas entre
+          Análise e Desenvolvimento de Sistemas, Engenharia da Computação e Ciência da Computação, nos turnos
+          matutino e noturno. Esse processo podia levar cerca de 20 dias e exigia lidar com múltiplas restrições
+          simultâneas de professores, disciplinas e turmas. :contentReference[oaicite:2]{index=2}
+        </p>
+      </div>
+    </section>
+
+    <!-- PROBLEMA / OBJETIVOS -->
+    <section class="row g-3 mb-5">
+      <div class="col-lg-6">
+        <div class="card card-soft p-4 h-100 lift">
+          <h3 class="h4 fw-bold mb-3">Problema</h3>
+          <ul class="mb-0 text-secondary-emphasis">
+            <li>Montagem manual de horários com alto nível de complexidade</li>
+            <li>Conflitos de alocação entre professores, disciplinas e turmas</li>
+            <li>Tempo elevado para fechamento e validação da grade</li>
+            <li>Necessidade de ajustes emergenciais no início do semestre</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card card-soft p-4 h-100 lift">
+          <h3 class="h4 fw-bold mb-3">Objetivos</h3>
+          <ul class="mb-0 text-secondary-emphasis">
+            <li>Automatizar e otimizar a elaboração do quadro de horários</li>
+            <li>Reduzir conflitos de alocação de docentes e disciplinas</li>
+            <li>Gerar visualizações claras e organizadas dos horários</li>
+            <li>Melhorar a eficiência da gestão acadêmica</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNCIONALIDADES -->
+    <section class="mb-5">
+      <div class="d-flex align-items-end justify-content-between mb-3">
+        <h3 class="h4 fw-bold mb-0">Principais funcionalidades</h3>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Lista de quadros</div>
+            <div class="text-secondary-emphasis">Consulta de quadros existentes com filtros e ações administrativas.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Geração automática</div>
+            <div class="text-secondary-emphasis">Fluxo para selecionar turma e semestre e gerar a grade automaticamente.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Visualização do quadro</div>
+            <div class="text-secondary-emphasis">Tabela organizada com horários, disciplinas e professores alocados.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Cadastro de disciplinas</div>
+            <div class="text-secondary-emphasis">Registro de carga horária, distribuição semanal e modalidade.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Disciplinas híbridas</div>
+            <div class="text-secondary-emphasis">Definição de horas presenciais e online em um mesmo fluxo.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Cadastro de professores</div>
+            <div class="text-secondary-emphasis">Disponibilidade por dia e turno, carga horária e disciplinas aptas.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Cadastro de turmas</div>
+            <div class="text-secondary-emphasis">Estruturação de cursos, períodos, turno, unidade e identificação da turma.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Matriz curricular e perfil</div>
+            <div class="text-secondary-emphasis">Administração da matriz, configurações do sistema e gerenciamento de conta.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="mb-5">
+      <div class="card card-soft p-4 lift">
+        <h3 class="h4 fw-bold mb-3">Processo</h3>
+        <p class="text-secondary-emphasis mb-3">
+          Segundo a documentação, o projeto passou por levantamento de requisitos com entrevistas estruturadas e
+          semiestruturadas com a coordenação, organização de ideias com brainstorming, documentação de requisitos,
+          prototipação no Figma, validações recorrentes com a coordenação e testes de usabilidade e integração. :contentReference[oaicite:3]{index=3} :contentReference[oaicite:4]{index=4}
+        </p>
+        <p class="mb-0 text-secondary-emphasis">
+          No meu papel, o foco esteve em estruturar interfaces claras para um sistema interno com muitos dados e regras,
+          priorizando legibilidade, consistência visual e facilidade de navegação entre módulos administrativos.
+        </p>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="telas" class="mb-5">
+      <div class="d-flex align-items-end justify-content-between mb-2">
+        <h3 class="h4 fw-bold mb-0">Protótipos (telas)</h3>
+        <span class="gallery-counter" id="galleryCounter">1 / 10</span>
+      </div>
+
+      <div class="row g-3">
+
+        <div class="col-md-6">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/quadro-horarios/lista-de-horarios.png" data-title="Lista de Quadros de Horários">
+            <div class="card card-soft p-2 lift">
+              <div class="screen-frame">
+                <img src="./assets/quadro-horarios/lista-de-horarios.png" alt="Lista de Quadros de Horários">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Lista de Quadros</span>
+                <span class="badge rounded-pill badge-accent">Consulta</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-md-6">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/quadro-horarios/gerar-quadros.png" data-title="Gerar Novo Quadro">
+            <div class="card card-soft p-2 lift">
+              <div class="screen-frame">
+                <img src="./assets/quadro-horarios/gerar-quadros.png" alt="Gerar Novo Quadro">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Gerar Novo Quadro</span>
+                <span class="badge rounded-pill badge-accent">Automação</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-md-6">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/quadro-horarios/quadro-gerado.png" data-title="Quadro Gerado">
+            <div class="card card-soft p-2 lift">
+              <div class="screen-frame">
+                <img src="./assets/quadro-horarios/quadro-gerado.png" alt="Quadro Gerado">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Quadro Gerado</span>
+                <span class="badge rounded-pill badge-accent">Visualização</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-md-6">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/quadro-horarios/cadastro-de-disciplinas.png" data-title="Cadastro de Disciplinas">
+            <div class="card card-soft p-2 lift">
+              <div class="screen-frame">
+                <img src="./assets/quadro-horarios/cadastro-de-disciplinas.png" alt="Cadastro de Disciplinas">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Cadastro de Disciplinas</span>
+                <span class="badge rounded-pill badge-accent">Cadastro</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-md-6">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/quadro-horarios/disciplinas-hibridas.jpg" data-title="Disciplinas Híbridas">
+            <div class="card card-soft p-2 lift">
+              <div class="screen-frame">
+                <img src="./assets/quadro-horarios/disciplinas-hibridas.jpg" alt="Disciplinas Híbridas">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Disciplinas Híbridas</span>
+                <span class="badge rounded-pill badge-accent">Modalidade</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-md-6">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/quadro-horarios/cadastro-de-professores.png" data-title="Cadastro de Professores">
+            <div class="card card-soft p-2 lift">
+              <div class="screen-frame">
+                <img src="./assets/quadro-horarios/cadastro-de-professores.png" alt="Cadastro de Professores">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Cadastro de Professores</span>
+                <span class="badge rounded-pill badge-accent">Docentes</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-md-6">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/quadro-horarios/cadastro-de-professores2.jpg" data-title="Edição de Professores">
+            <div class="card card-soft p-2 lift">
+              <div class="screen-frame">
+                <img src="./assets/quadro-horarios/cadastro-de-professores2.jpg" alt="Edição de Professores">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Edição de Professores</span>
+                <span class="badge rounded-pill badge-accent">Modal</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-md-6">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/quadro-horarios/cadastro-de-turma.jpg" data-title="Cadastro de Turmas">
+            <div class="card card-soft p-2 lift">
+              <div class="screen-frame">
+                <img src="./assets/quadro-horarios/cadastro-de-turma.jpg" alt="Cadastro de Turmas">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Cadastro de Turmas</span>
+                <span class="badge rounded-pill badge-accent">Turmas</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-md-6">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/quadro-horarios/cadastro-de-matriz.jpg" data-title="Cadastro de Matriz Curricular">
+            <div class="card card-soft p-2 lift">
+              <div class="screen-frame">
+                <img src="./assets/quadro-horarios/cadastro-de-matriz.jpg" alt="Cadastro de Matriz Curricular">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Matriz Curricular</span>
+                <span class="badge rounded-pill badge-accent">Estrutura</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-md-6">
+          <button class="gallery-btn" data-bs-toggle="modal" data-bs-target="#imgModal"
+                  data-img="./assets/quadro-horarios/perfil.jpg" data-title="Perfil e Configurações">
+            <div class="card card-soft p-2 lift">
+              <div class="screen-frame">
+                <img src="./assets/quadro-horarios/perfil.jpg" alt="Perfil e Configurações">
+              </div>
+              <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+                <span class="fw-semibold">Perfil e Configurações</span>
+                <span class="badge rounded-pill badge-accent">Conta</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESULTADOS -->
+    <section class="mb-5">
+      <div class="card card-soft p-4 lift">
+        <h3 class="h4 fw-bold mb-3">Resultados e aprendizados</h3>
+        <ul class="mb-0 text-secondary-emphasis">
+          <li>Prática em UI/UX para um sistema interno com múltiplos módulos e regras de negócio</li>
+          <li>Experiência em organizar fluxos complexos de cadastro, consulta e geração automática</li>
+          <li>Aprendizado sobre clareza visual em interfaces administrativas e acadêmicas</li>
+          <li>Contato com um problema real da coordenação e com validação junto a usuários</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer py-4 text-center">
+      <span class="text-secondary small">© 2026 — Julyana Lima</span>
+    </footer>
+
+  </main>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content border-0 card-soft position-relative" style="border-radius: 1rem;">
+
+        <button type="button"
+                class="btn-close position-absolute top-0 end-0 m-3"
+                data-bs-dismiss="modal"
+                aria-label="Fechar"></button>
+
+        <button id="prevBtn" class="gallery-nav left" aria-label="Imagem anterior">❮</button>
+        <button id="nextBtn" class="gallery-nav right" aria-label="Próxima imagem">❯</button>
+
+        <div class="modal-body text-center py-5">
+          <h5 class="fw-bold mb-4" id="imgTitle">Imagem</h5>
+          <img id="imgPreview" class="modal-img" src="" alt="">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modal = document.getElementById('imgModal');
+      const imgPreview = document.getElementById('imgPreview');
+      const imgTitle = document.getElementById('imgTitle');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const counter = document.getElementById('galleryCounter');
+
+      const galleryItems = Array.from(document.querySelectorAll('.gallery-btn'));
+      let currentIndex = 0;
+
+      function updateCounter() {
+        counter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
+      }
+
+      function showImage(index) {
+        const btn = galleryItems[index];
+        const src = btn.getAttribute('data-img');
+        const title = btn.getAttribute('data-title');
+
+        imgPreview.src = src;
+        imgPreview.alt = title;
+        imgTitle.textContent = title;
+        updateCounter();
+      }
+
+      modal.addEventListener('show.bs.modal', function (event) {
+        const clickedBtn = event.relatedTarget;
+        currentIndex = galleryItems.indexOf(clickedBtn);
+        showImage(currentIndex);
+      });
+
+      prevBtn.addEventListener('click', function () {
+        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        showImage(currentIndex);
+      });
+
+      nextBtn.addEventListener('click', function () {
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        showImage(currentIndex);
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (!modal.classList.contains('show')) return;
+
+        if (e.key === 'ArrowRight') {
+          nextBtn.click();
+        }
+
+        if (e.key === 'ArrowLeft') {
+          prevBtn.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
