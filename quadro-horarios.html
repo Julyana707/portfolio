@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quadro de Horários Inteligente — Case | Julyana Lima</title>
+
+  <meta name="description" content="Case do projeto Quadro de Horários Inteligente — sistema web acadêmico para geração automática de grades de aulas. Por Julyana Lima." />
+  <meta property="og:title" content="Quadro de Horários Inteligente — Case | Julyana Lima" />
+  <meta property="og:description" content="Sistema para automatizar a elaboração de quadros de horários acadêmicos na UniNorte." />
+  <meta property="og:image" content="./assets/quadro-horarios/quadro-gerado.png" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300ABE4'/><text y='.9em' font-size='70' x='15' fill='%23001018' font-family='sans-serif' font-weight='bold'>J</text></svg>" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <main class="container py-5">
+
+    <!-- TOPO -->
+    <div class="d-flex justify-content-between align-items-center mb-5">
+      <h1 class="h3 fw-bold mb-0">Quadro de Horários Inteligente</h1>
+      <div class="d-flex gap-2">
+        <a class="btn btn-ghost" href="index.html">Voltar</a>
+        <a class="btn btn-accent" href="#telas">Ver telas</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="row g-4 align-items-center mb-5">
+      <div class="col-lg-7">
+        <span class="badge rounded-pill badge-accent mb-3">Acadêmico • UI/UX • Sistema Web</span>
+        <h2 class="display-6 fw-bold mb-3">Sistema inteligente para elaboração de quadros de horários acadêmicos</h2>
+        <p class="text-secondary-emphasis mb-4" style="max-width: 62ch;">
+          Projeto acadêmico em grupo desenvolvido para apoiar a coordenação da UniNorte na montagem
+          de horários acadêmicos, reduzindo o tempo do processo manual, minimizando conflitos
+          e organizando melhor a alocação de turmas, professores e disciplinas.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-accent" href="#visao-geral">Visão geral</a>
+          <a class="btn btn-ghost" href="#telas">Protótipos</a>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card card-soft p-4 lift">
+          <h3 class="h5 fw-bold mb-2">Destaque</h3>
+          <p class="mb-0 text-secondary-emphasis">
+            Atuei em UI/UX em um sistema pensado para automatizar uma tarefa crítica da gestão acadêmica,
+            transformando um processo manual e demorado em uma experiência mais clara, centralizada e eficiente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISÃO GERAL -->
+    <section id="visao-geral" class="mb-5">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card card-soft p-4 h-100 lift">
+            <div class="text-secondary small mb-1">Meu papel</div>
+            <div class="fw-semibold">UI/UX + apoio em requisitos</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-soft p-4 h-100 lift">
+            <div class="text-secondary small mb-1">Ferramentas / stack do projeto</div>
+            <div class="fw-semibold">Figma • Vue.js • Laravel • Firebase</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-soft p-4 h-100 lift">
+            <div class="text-secondary small mb-1">Projeto</div>
+            <div class="fw-semibold">Acadêmico em grupo • UniNorte</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEXTO -->
+    <section class="mb-5">
+      <div class="card card-soft p-4 lift">
+        <h3 class="h4 fw-bold mb-3">Contexto</h3>
+        <p class="mb-0 text-secondary-emphasis">
+          A elaboração dos quadros de horários acadêmicos era feita manualmente com apoio de ferramentas
+          como Excel e Word, envolvendo 17 turmas distribuídas entre os cursos de Análise e Desenvolvimento
+          de Sistemas, Engenharia da Computação e Ciência da Computação, nos turnos matutino e noturno.
+          Esse processo podia levar cerca de 20 dias e exigia lidar com múltiplas restrições simultâneas
+          de professores, disciplinas e turmas.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROBLEMA / OBJETIVOS -->
+    <section class="row g-3 mb-5">
+      <div class="col-lg-6">
+        <div class="card card-soft p-4 h-100 lift">
+          <h3 class="h4 fw-bold mb-3">Problema</h3>
+          <ul class="mb-0 text-secondary-emphasis">
+            <li>Montagem manual de horários com alto nível de complexidade</li>
+            <li>Conflitos de alocação entre professores, disciplinas e turmas</li>
+            <li>Tempo elevado para fechamento e validação da grade</li>
+            <li>Necessidade de ajustes emergenciais no início do semestre</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card card-soft p-4 h-100 lift">
+          <h3 class="h4 fw-bold mb-3">Objetivos</h3>
+          <ul class="mb-0 text-secondary-emphasis">
+            <li>Automatizar e otimizar a elaboração do quadro de horários</li>
+            <li>Reduzir conflitos de alocação de docentes e disciplinas</li>
+            <li>Gerar visualizações claras e organizadas dos horários</li>
+            <li>Melhorar a eficiência da gestão acadêmica</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNCIONALIDADES -->
+    <section class="mb-5">
+      <h3 class="h4 fw-bold mb-3">Principais funcionalidades</h3>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-3"><div class="card card-soft p-3 h-100 lift"><div class="fw-semibold mb-1">Lista de quadros</div><div class="text-secondary-emphasis">Consulta de quadros existentes com filtros e ações administrativas.</div></div></div>
+        <div class="col-md-6 col-lg-3"><div class="card card-soft p-3 h-100 lift"><div class="fw-semibold mb-1">Geração automática</div><div class="text-secondary-emphasis">Fluxo para selecionar turma e semestre e gerar a grade automaticamente.</div></div></div>
+        <div class="col-md-6 col-lg-3"><div class="card card-soft p-3 h-100 lift"><div class="fw-semibold mb-1">Visualização do quadro</div><div class="text-secondary-emphasis">Tabela organizada com horários, disciplinas e professores alocados.</div></div></div>
+        <div class="col-md-6 col-lg-3"><div class="card card-soft p-3 h-100 lift"><div class="fw-semibold mb-1">Cadastro de disciplinas</div><div class="text-secondary-emphasis">Registro de carga horária, distribuição semanal e modalidade.</div></div></div>
+        <div class="col-md-6 col-lg-3"><div class="card card-soft p-3 h-100 lift"><div class="fw-semibold mb-1">Disciplinas híbridas</div><div class="text-secondary-emphasis">Definição de horas presenciais e online em um mesmo fluxo.</div></div></div>
+        <div class="col-md-6 col-lg-3"><div class="card card-soft p-3 h-100 lift"><div class="fw-semibold mb-1">Cadastro de professores</div><div class="text-secondary-emphasis">Disponibilidade por dia e turno, carga horária e disciplinas aptas.</div></div></div>
+        <div class="col-md-6 col-lg-3"><div class="card card-soft p-3 h-100 lift"><div class="fw-semibold mb-1">Cadastro de turmas</div><div class="text-secondary-emphasis">Estruturação de cursos, períodos, turno, unidade e identificação da turma.</div></div></div>
+        <div class="col-md-6 col-lg-3"><div class="card card-soft p-3 h-100 lift"><div class="fw-semibold mb-1">Matriz curricular e perfil</div><div class="text-secondary-emphasis">Administração da matriz, configurações do sistema e gerenciamento de conta.</div></div></div>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="mb-5">
+      <div class="card card-soft p-4 lift">
+        <h3 class="h4 fw-bold mb-3">Processo</h3>
+        <p class="text-secondary-emphasis mb-3">
+          O projeto passou por levantamento de requisitos com entrevistas estruturadas e semiestruturadas
+          com a coordenação, organização de ideias com brainstorming, documentação de requisitos,
+          prototipação no Figma, validações recorrentes com a coordenação e testes de usabilidade
+          e integração.
+        </p>
+        <p class="mb-0 text-secondary-emphasis">
+          No meu papel, o foco esteve em estruturar interfaces claras para um sistema interno com muitos
+          dados e regras, priorizando legibilidade, consistência visual e facilidade de navegação entre
+          módulos administrativos.
+        </p>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="telas" class="mb-5">
+      <div class="d-flex align-items-end justify-content-between mb-2">
+        <h3 class="h4 fw-bold mb-0">Protótipos (telas)</h3>
+        <span class="gallery-counter" id="galleryCounter">1 / 10</span>
+      </div>
+      <p class="text-secondary small mb-3">Clique para ampliar</p>
+      <div class="row g-3" id="gallery-grid"></div>
+    </section>
+
+    <!-- RESULTADOS -->
+    <section class="mb-5">
+      <div class="card card-soft p-4 lift">
+        <h3 class="h4 fw-bold mb-3">Resultados e aprendizados</h3>
+        <ul class="mb-0 text-secondary-emphasis">
+          <li>Prática em UI/UX para um sistema interno com múltiplos módulos e regras de negócio</li>
+          <li>Experiência em organizar fluxos complexos de cadastro, consulta e geração automática</li>
+          <li>Aprendizado sobre clareza visual em interfaces administrativas e acadêmicas</li>
+          <li>Contato com um problema real da coordenação e com validação junto a usuários</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer py-4 text-center">
+      <span class="text-secondary small">© 2026 — Julyana Lima</span>
+    </footer>
+  </main>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="imgModal" tabindex="-1" aria-label="Visualização de tela do projeto">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content border-0 card-soft position-relative" style="border-radius: 1rem;">
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3"
+                data-bs-dismiss="modal" aria-label="Fechar galeria"></button>
+        <button id="prevBtn" class="gallery-nav left" aria-label="Tela anterior">❮</button>
+        <button id="nextBtn" class="gallery-nav right" aria-label="Próxima tela">❯</button>
+        <div class="modal-body text-center py-5">
+          <h5 class="fw-bold mb-4" id="imgTitle">Imagem</h5>
+          <img id="imgPreview" class="modal-img" src="" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const telas = [
+      { src: './assets/quadro-horarios/lista-de-horarios.png',        title: 'Lista de Quadros',         badge: 'Consulta',     alt: 'Tela de listagem de quadros de horários existentes com filtros e ações administrativas' },
+      { src: './assets/quadro-horarios/gerar-quadros.png',            title: 'Gerar Novo Quadro',        badge: 'Automação',    alt: 'Tela para selecionar turma e semestre e iniciar a geração automática do quadro de horários' },
+      { src: './assets/quadro-horarios/quadro-gerado.png',            title: 'Quadro Gerado',            badge: 'Visualização', alt: 'Tabela do quadro de horários gerado automaticamente com disciplinas, professores e turmas alocados' },
+      { src: './assets/quadro-horarios/cadastro-de-disciplinas.png',  title: 'Cadastro de Disciplinas',  badge: 'Cadastro',     alt: 'Formulário de cadastro de disciplinas com carga horária e distribuição semanal' },
+      { src: './assets/quadro-horarios/disciplinas-hibridas.jpg',     title: 'Disciplinas Híbridas',     badge: 'Modalidade',   alt: 'Tela de configuração de disciplinas híbridas com definição de horas presenciais e online' },
+      { src: './assets/quadro-horarios/cadastro-de-professores.png',  title: 'Cadastro de Professores',  badge: 'Docentes',     alt: 'Formulário de cadastro de professores com disponibilidade por dia, turno e disciplinas aptas' },
+      { src: './assets/quadro-horarios/cadastro-de-professores2.jpg', title: 'Edição de Professores',    badge: 'Modal',        alt: 'Modal de edição de dados de professor já cadastrado no sistema' },
+      { src: './assets/quadro-horarios/cadastro-de-turma.jpg',        title: 'Cadastro de Turmas',       badge: 'Turmas',       alt: 'Formulário de cadastro de turmas com curso, período, turno e unidade' },
+      { src: './assets/quadro-horarios/cadastro-de-matriz.jpg',       title: 'Matriz Curricular',        badge: 'Estrutura',    alt: 'Tela de administração da matriz curricular com estrutura de disciplinas por período' },
+      { src: './assets/quadro-horarios/perfil.jpg',                   title: 'Perfil e Configurações',   badge: 'Conta',        alt: 'Tela de perfil do usuário com configurações do sistema e gerenciamento de conta' },
+    ];
+
+    const grid    = document.getElementById('gallery-grid');
+    const counter = document.getElementById('galleryCounter');
+    let currentIndex = 0;
+
+    telas.forEach((t, i) => {
+      const col = document.createElement('div');
+      col.className = 'col-md-6';
+      col.innerHTML = `
+        <button class="gallery-btn" data-index="${i}"
+                data-bs-toggle="modal" data-bs-target="#imgModal"
+                aria-label="Ampliar tela: ${t.title}">
+          <div class="card card-soft p-2 lift">
+            <div class="screen-frame">
+              <img src="${t.src}" alt="${t.alt}" loading="lazy">
+            </div>
+            <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+              <span class="fw-semibold">${t.title}</span>
+              <span class="badge rounded-pill badge-accent">${t.badge}</span>
+            </div>
+          </div>
+        </button>`;
+      grid.appendChild(col);
+    });
+
+    counter.textContent = `1 / ${telas.length}`;
+
+    function showImage(index) {
+      const t = telas[index];
+      document.getElementById('imgPreview').src = t.src;
+      document.getElementById('imgPreview').alt = t.alt;
+      document.getElementById('imgTitle').textContent = t.title;
+      counter.textContent = `${index + 1} / ${telas.length}`;
+    }
+
+    document.getElementById('imgModal').addEventListener('show.bs.modal', e => {
+      currentIndex = parseInt(e.relatedTarget.dataset.index);
+      showImage(currentIndex);
+    });
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + telas.length) % telas.length;
+      showImage(currentIndex);
+    });
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % telas.length;
+      showImage(currentIndex);
+    });
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('imgModal').classList.contains('show')) return;
+      if (e.key === 'ArrowRight') document.getElementById('nextBtn').click();
+      if (e.key === 'ArrowLeft')  document.getElementById('prevBtn').click();
+    });
+  </script>
+</body>
+</html>

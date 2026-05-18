@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Garden — Case | Julyana Lima</title>
+
+  <meta name="description" content="Case do projeto Smart Garden — sistema IoT para monitoramento inteligente de plantas, com dados em tempo real e identificação por IA. Por Julyana Lima." />
+  <meta property="og:title" content="Smart Garden — Case | Julyana Lima" />
+  <meta property="og:description" content="Sistema IoT para monitoramento de plantas com Flutter, Firebase e ESP32." />
+  <meta property="og:image" content="./assets/smart-garden/visao-geral.png" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300ABE4'/><text y='.9em' font-size='70' x='15' fill='%23001018' font-family='sans-serif' font-weight='bold'>J</text></svg>" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <main class="container py-5">
+
+    <!-- TOP -->
+    <div class="d-flex justify-content-between align-items-center mb-5">
+      <h1 class="h3 fw-bold mb-0">Smart Garden</h1>
+      <div class="d-flex gap-2">
+        <a class="btn btn-ghost" href="index.html">Voltar</a>
+        <a class="btn btn-accent" href="#telas">Telas</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="row g-4 align-items-center mb-5">
+      <div class="col-lg-7">
+        <span class="badge rounded-pill badge-accent mb-3">TCC • UI/UX • Mobile • IoT</span>
+        <h2 class="display-6 fw-bold mb-3">Monitoramento inteligente de plantas</h2>
+        <p class="text-secondary-emphasis mb-4" style="max-width: 62ch;">
+          Sistema IoT para monitoramento inteligente de plantas, com dados em tempo real,
+          alertas e identificação de plantas por IA.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-accent" href="#visao-geral">Visão geral</a>
+          <a class="btn btn-ghost" href="#telas">Ver telas</a>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card card-soft p-4 lift">
+          <h3 class="h5 fw-bold mb-2">Destaque</h3>
+          <p class="mb-0 text-secondary-emphasis">
+            Transformei dados técnicos (sensores/IoT) em informações simples e acionáveis
+            para usuários iniciantes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISÃO GERAL -->
+    <section id="visao-geral" class="mb-5">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card card-soft p-4 h-100 lift">
+            <div class="text-secondary small mb-1">Meu papel</div>
+            <div class="fw-semibold">UI/UX + Front-end (Flutter)</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-soft p-4 h-100 lift">
+            <div class="text-secondary small mb-1">Stack</div>
+            <div class="fw-semibold">Flutter • Firebase • ESP32 • Sensores</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-soft p-4 h-100 lift">
+            <div class="text-secondary small mb-1">Entregas</div>
+            <div class="fw-semibold">Protótipo • App • Integração IoT</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEXTO -->
+    <section class="mb-5">
+      <div class="card card-soft p-4 lift">
+        <h3 class="h4 fw-bold mb-3">Contexto</h3>
+        <p class="mb-0 text-secondary-emphasis">
+          Jardineiros iniciantes costumam ter dificuldade para entender as necessidades de cada planta
+          e manter consistência nos cuidados. O Smart Garden resolve isso com monitoramento ambiental
+          e recomendações no app.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROBLEMA / OBJETIVOS -->
+    <section class="row g-3 mb-5">
+      <div class="col-lg-6">
+        <div class="card card-soft p-4 h-100 lift">
+          <h3 class="h4 fw-bold mb-3">Problema</h3>
+          <ul class="mb-0 text-secondary-emphasis">
+            <li>Dificuldade em identificar necessidades específicas de cada planta</li>
+            <li>Monitoramento manual e inconsistente</li>
+            <li>Falta de rotina e interpretação de sinais de problemas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card card-soft p-4 h-100 lift">
+          <h3 class="h4 fw-bold mb-3">Objetivos</h3>
+          <ul class="mb-0 text-secondary-emphasis">
+            <li>Monitorar condições ambientais em tempo real</li>
+            <li>Integrar sensores + ESP32 com app mobile</li>
+            <li>Exibir dados com clareza e gerar alertas</li>
+            <li>Ajudar no cuidado com orientações e boas práticas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNCIONALIDADES -->
+    <section class="mb-5">
+      <h3 class="h4 fw-bold mb-3">Principais funcionalidades</h3>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Dashboard + favoritos</div>
+            <div class="text-secondary-emphasis">Visão geral rápida das plantas e status.</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Detalhes + sensores</div>
+            <div class="text-secondary-emphasis">Dados exibidos de forma visual e clara.</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Notificações</div>
+            <div class="text-secondary-emphasis">Alertas para agir antes de a planta sofrer.</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card card-soft p-3 h-100 lift">
+            <div class="fw-semibold mb-1">Identificação por IA</div>
+            <div class="text-secondary-emphasis">Scan para reconhecer a planta e sugerir cuidados.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="telas" class="mb-5">
+      <div class="d-flex align-items-end justify-content-between mb-2">
+        <h3 class="h4 fw-bold mb-0">Protótipos (telas)</h3>
+        <span class="gallery-counter" id="galleryCounter">1 / 8</span>
+      </div>
+      <p class="text-secondary small mb-3">Clique para ampliar</p>
+
+      <div class="row g-3" id="gallery-grid"></div>
+    </section>
+
+    <!-- RESULTADOS -->
+    <section class="mb-5">
+      <div class="card card-soft p-4 lift">
+        <h3 class="h4 fw-bold mb-3">Resultados e aprendizados</h3>
+        <ul class="mb-0 text-secondary-emphasis">
+          <li>Integração hardware + app validada em testes internos</li>
+          <li>Melhoria na clareza da informação (dados → ação)</li>
+          <li>Aprendizado em UI para dados IoT e consistência visual</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer py-4 text-center">
+      <span class="text-secondary small">© 2026 — Julyana Lima</span>
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="imgModal" tabindex="-1" aria-label="Visualização de tela do projeto">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content border-0 card-soft position-relative" style="border-radius: 1rem;">
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3"
+                data-bs-dismiss="modal" aria-label="Fechar galeria"></button>
+        <button id="prevBtn" class="gallery-nav left" aria-label="Tela anterior">❮</button>
+        <button id="nextBtn" class="gallery-nav right" aria-label="Próxima tela">❯</button>
+        <div class="modal-body text-center py-5">
+          <h5 class="fw-bold mb-4" id="imgTitle">Imagem</h5>
+          <img id="imgPreview" class="modal-img" src="" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const telas = [
+      { src: './assets/smart-garden/boas-vindas.jpg',        title: 'Boas-vindas',    badge: 'Onboarding', alt: 'Tela de boas-vindas do Smart Garden com apresentação do aplicativo' },
+      { src: './assets/smart-garden/login.png',              title: 'Login',          badge: 'Auth',       alt: 'Tela de login do Smart Garden com campos de e-mail e senha' },
+      { src: './assets/smart-garden/cadastro.png',           title: 'Cadastro',       badge: 'Auth',       alt: 'Tela de cadastro de nova conta no Smart Garden' },
+      { src: './assets/smart-garden/visao-geral.png',        title: 'Visão geral',    badge: 'Home',       alt: 'Painel principal do Smart Garden com lista de plantas e seus status' },
+      { src: './assets/smart-garden/minhas-plantas.png',     title: 'Minhas plantas', badge: 'List',       alt: 'Tela de listagem de plantas cadastradas pelo usuário' },
+      { src: './assets/smart-garden/scan.png',               title: 'Scan',           badge: 'IA',         alt: 'Tela de escaneamento de planta por câmera para identificação por inteligência artificial' },
+      { src: './assets/smart-garden/detalhes.png',           title: 'Detalhes',       badge: 'Sensores',   alt: 'Tela de detalhes da planta exibindo dados dos sensores como umidade e temperatura' },
+      { src: './assets/smart-garden/notificacoes.png',       title: 'Notificações',   badge: 'Alertas',    alt: 'Tela de notificações e alertas sobre o estado das plantas' },
+    ];
+
+    const grid    = document.getElementById('gallery-grid');
+    const counter = document.getElementById('galleryCounter');
+    let currentIndex = 0;
+
+    telas.forEach((t, i) => {
+      const col = document.createElement('div');
+      col.className = 'col-6 col-md-4 col-lg-3';
+      col.innerHTML = `
+        <button class="gallery-btn" data-index="${i}"
+                data-bs-toggle="modal" data-bs-target="#imgModal"
+                aria-label="Ampliar tela: ${t.title}">
+          <div class="card card-soft p-2 lift">
+            <div class="phone-frame">
+              <img src="${t.src}" alt="${t.alt}" loading="lazy">
+            </div>
+            <div class="d-flex justify-content-between align-items-center px-2 pt-2 pb-1">
+              <span class="fw-semibold">${t.title}</span>
+              <span class="badge rounded-pill badge-accent">${t.badge}</span>
+            </div>
+          </div>
+        </button>`;
+      grid.appendChild(col);
+    });
+
+    counter.textContent = `1 / ${telas.length}`;
+
+    function showImage(index) {
+      const t = telas[index];
+      document.getElementById('imgPreview').src = t.src;
+      document.getElementById('imgPreview').alt = t.alt;
+      document.getElementById('imgTitle').textContent = t.title;
+      counter.textContent = `${index + 1} / ${telas.length}`;
+    }
+
+    document.getElementById('imgModal').addEventListener('show.bs.modal', function(e) {
+      currentIndex = parseInt(e.relatedTarget.dataset.index);
+      showImage(currentIndex);
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + telas.length) % telas.length;
+      showImage(currentIndex);
+    });
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % telas.length;
+      showImage(currentIndex);
+    });
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('imgModal').classList.contains('show')) return;
+      if (e.key === 'ArrowRight') document.getElementById('nextBtn').click();
+      if (e.key === 'ArrowLeft')  document.getElementById('prevBtn').click();
+    });
+  </script>
+</body>
+</html>

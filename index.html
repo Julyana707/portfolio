@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio — Julyana Lima</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Portfólio de Julyana Lima — Engenheira de Computação com foco em desenvolvimento mobile, UI/UX e suporte de TI." />
+  <meta name="author" content="Julyana Lima" />
+
+  <!-- Open Graph (preview no LinkedIn, WhatsApp, etc.) -->
+  <meta property="og:title" content="Portfólio — Julyana Lima" />
+  <meta property="og:description" content="Projetos de UI/UX, desenvolvimento mobile e sistemas web por Julyana Lima." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/illustration.png" />
+
+  <!-- Favicon SVG inline -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300ABE4'/><text y='.9em' font-size='70' x='15' fill='%23001018' font-family='sans-serif' font-weight='bold'>J</text></svg>" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <main class="container py-5">
+
+    <!-- TOP -->
+    <div class="d-flex justify-content-between align-items-center mb-5">
+      <h1 class="h3 fw-bold mb-0">Portfólio</h1>
+      <div class="d-flex gap-2">
+        <a class="btn btn-ghost" href="#projects">Projetos</a>
+        <a class="btn btn-accent" href="#contact">Contato</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="row g-4 align-items-center mb-5">
+      <div class="col-lg-7">
+        <h2 class="display-6 fw-bold mb-3">
+          Olá, eu sou Julyana Lima.
+        </h2>
+
+        <p class="text-secondary-emphasis mb-3" style="max-width: 62ch;">
+          Graduada em Engenharia da Computação, com sólida base em desenvolvimento web, mobile e fundamentos de infraestrutura de TI.
+          Tenho interesse na criação de soluções digitais intuitivas e no suporte técnico a sistemas e usuários.
+        </p>
+
+        <p class="text-secondary-emphasis mb-4" style="max-width: 62ch;">
+          Possuo conhecimentos em Flutter, HTML, CSS, Firebase e Git, além de habilidades em resolução de problemas,
+          organização de processos e atendimento técnico. Busco oportunidades para atuar tanto em desenvolvimento
+          quanto em áreas de suporte e auxiliar de TI.
+        </p>
+
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-accent" href="smart-garden.html">Abrir Smart Garden</a>
+          <a class="btn btn-ghost" href="#projects">Ver projetos</a>
+        </div>
+      </div>
+
+      <div class="col-lg-5 d-none d-lg-flex align-items-center justify-content-center">
+        <div class="hero-photo-wrap">
+          <img src="./assets/julyana.jpg"
+               alt="Julyana Lima — Engenheira de Computação"
+               class="hero-photo"
+               loading="lazy">
+          <div class="hero-photo-badge">
+            UI/UX • Front-end • Suporte TI
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="mb-5">
+      <div class="d-flex align-items-end justify-content-between mb-3">
+        <h3 class="h4 fw-bold mb-0">Skills</h3>
+      </div>
+
+      <ul class="nav nav-pills gap-2 mb-3" id="skillsTab" role="tablist">
+        <li class="nav-item">
+          <button class="nav-link active btn-ghost" data-bs-toggle="tab" data-bs-target="#tecnologias">
+            Tecnologias
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn-ghost" data-bs-toggle="tab" data-bs-target="#design">
+            Design & Desenvolvimento
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn-ghost" data-bs-toggle="tab" data-bs-target="#metodologias">
+            Metodologias & Ferramentas
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="skillsTabContent"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="mb-5">
+      <div class="d-flex align-items-end justify-content-between mb-3">
+        <div>
+          <h3 class="h4 fw-bold mb-1">Projetos</h3>
+          <p class="text-secondary-emphasis mb-0">Projetos acadêmicos</p>
+        </div>
+      </div>
+
+      <ul class="nav nav-tabs mb-3" id="projectsTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="featured-tab" data-bs-toggle="tab" data-bs-target="#featured" type="button" role="tab">
+            Destaques
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="allprojects-tab" data-bs-toggle="tab" data-bs-target="#allprojects" type="button" role="tab">
+            Todos os projetos
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="projectsTabContent">
+        <div class="tab-pane fade show active" id="featured" role="tabpanel">
+          <div class="row g-3" id="featured-cards"></div>
+        </div>
+        <div class="tab-pane fade" id="allprojects" role="tabpanel">
+          <div class="row g-3" id="all-cards"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mb-4">
+      <div class="card card-soft p-4 p-lg-5 lift">
+        <div class="row g-3 align-items-center">
+          <div class="col-lg-8">
+            <h3 class="h4 fw-bold mb-2">Vamos conversar?</h3>
+            <p class="text-secondary-emphasis mb-0">
+              Se você tiver interesse em conversar sobre estágio, suporte de TI ou desenvolvimento, me envie uma mensagem.
+            </p>
+          </div>
+          <div class="col-lg-4 d-flex gap-2 justify-content-lg-end flex-wrap">
+            <a class="btn btn-accent"
+               href="https://mail.google.com/mail/?view=cm&fs=1&to=lyana692718@gmail.com"
+               target="_blank"
+               rel="noopener noreferrer">
+              Enviar email
+            </a>
+            <a class="btn btn-ghost"
+               href="https://www.linkedin.com/in/julyana-lima-76225b268"
+               target="_blank"
+               rel="noopener noreferrer">
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer py-4 text-center">
+      <span class="text-secondary small">© 2026 — Julyana Lima</span>
+    </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    /* ── Ícones SVG inline (monocromáticos, sem dependência de CDN) ── */
+    const SVG = {
+      js: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="none"/><path d="M9 22.5c.6.9 1.4 1.6 2.9 1.6 1.3 0 2.1-.65 2.1-1.55 0-1.08-.84-1.46-2.25-2.09l-.77-.33C9.1 19.3 7.9 18.3 7.9 16.2c0-1.9 1.44-3.35 3.7-3.35 1.6 0 2.75.56 3.58 2.02l-1.96 1.26c-.43-.77-.9-1.07-1.62-1.07-.74 0-1.2.47-1.2 1.07 0 .75.47 1.05 1.55 1.52l.77.33C14.5 18.7 16 19.66 16 21.8c0 2.3-1.8 3.54-4.23 3.54-2.37 0-3.9-1.13-4.65-2.6L9 22.5zm9.3.22c.52.92 1 1.7 2.12 1.7.97 0 1.59-.38 1.59-1.86v-9.7h2.42v9.73c0 3.07-1.8 4.47-4.42 4.47-2.37 0-3.75-1.23-4.45-2.7l2.74-1.64z" fill="currentColor"/></svg>`,
+      python: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.9 6C11.6 6 11.9 7.8 11.9 7.8v2.1h4.1v.6H9.5S7 10.2 7 14.5s2.2 4.2 2.2 4.2h1.3v-2s-.1-2.2 2.2-2.2h3.7s2.1 0 2.1-2V8.7S18.9 6 15.9 6zm-2 1.2c.4 0 .7.3.7.7s-.3.7-.7.7-.7-.3-.7-.7.3-.7.7-.7z" fill="currentColor"/><path d="M16.1 26c4.3 0 4-.8 4-.8v-2.1H16v-.6h6.5s2.5.3 2.5-4-2.2-4.2-2.2-4.2H21.5v2s.1 2.2-2.2 2.2H15.6s-2.1 0-2.1 2v3.8S13.1 26 16.1 26zm2-1.2c-.4 0-.7-.3-.7-.7s.3-.7.7-.7.7.3.7.7-.3.7-.7.7z" fill="currentColor"/></svg>`,
+      html: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4l2 22 8 2 8-2 2-22H6zm14.7 6H11.3l.2 2.5h8.7l-.7 7.4L16 21l-3.5-1.1-.2-2.9h2.4l.1 1.5 1.2.3 1.2-.3.1-1.9H11l-.5-5.5h11l-.3 2.9H14.8v-.5h-.7.7z" fill="currentColor"/></svg>`,
+      css: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4l2 22 8 2 8-2 2-22H6zm14.8 8.5H13l.2 2h7.4l-.6 6.3L16 22l-4-1.2-.3-3h2.4l.1 1.5 1.8.5 1.8-.5.2-2.3H11.2L10.5 9h11l-.3 3.5H20.8z" fill="currentColor"/></svg>`,
+      react: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="2.2" fill="currentColor"/><ellipse cx="16" cy="16" rx="12" ry="4.5" stroke="currentColor" stroke-width="1.5" fill="none"/><ellipse cx="16" cy="16" rx="12" ry="4.5" transform="rotate(60 16 16)" stroke="currentColor" stroke-width="1.5" fill="none"/><ellipse cx="16" cy="16" rx="12" ry="4.5" transform="rotate(120 16 16)" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>`,
+      flutter: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 4L4 14.5l4 4 4-4 8.5 8.5-4 4L28 15.5 14.5 4z" fill="currentColor" opacity=".85"/><path d="M12.5 22.5l4-4 4 4-4 4-4-4z" fill="currentColor"/></svg>`,
+      firebase: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 26l2.5-14.8 4.8 8.8L8 26zm7.3-5l-2-15L19 16l-3.7 5zm4.7 5L8 26l12-6.5 1 5.5-.3.5-.7.5z" fill="currentColor" opacity=".7"/><path d="M8 26l6.3-10L19 16l1 10H8z" fill="currentColor"/></svg>`,
+      figma: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="5" width="6" height="7" rx="3" fill="currentColor" opacity=".5"/><rect x="16" y="5" width="6" height="7" rx="3" fill="currentColor" opacity=".8"/><rect x="10" y="12" width="6" height="7" rx="3" fill="currentColor"/><circle cx="19" cy="15.5" r="3" fill="currentColor" opacity=".8"/><rect x="10" y="19" width="6" height="7" rx="3" fill="currentColor" opacity=".5"/></svg>`,
+      android: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 12h16v12a2 2 0 01-2 2H10a2 2 0 01-2-2V12z" fill="currentColor" opacity=".7"/><path d="M10.5 10C10.5 7.5 13 6 16 6s5.5 1.5 5.5 4H10.5z" fill="currentColor"/><circle cx="13" cy="8.5" r="1" fill="currentColor" opacity=".4"/><circle cx="19" cy="8.5" r="1" fill="currentColor" opacity=".4"/><rect x="6" y="13" width="2" height="6" rx="1" fill="currentColor" opacity=".6"/><rect x="24" y="13" width="2" height="6" rx="1" fill="currentColor" opacity=".6"/><rect x="12" y="26" width="2" height="4" rx="1" fill="currentColor" opacity=".6"/><rect x="18" y="26" width="2" height="4" rx="1" fill="currentColor" opacity=".6"/></svg>`,
+      git: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="8" r="3" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="8" cy="24" r="3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M11 8h13M8 11v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M21 8c0 6-4 10-10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>`,
+      github: `<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4C9.37 4 4 9.37 4 16c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016.02 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.82.57C24.56 25.8 28 21.3 28 16c0-6.63-5.37-12-12-12z" fill="currentColor"/></svg>`,
+    };
+
+    /* ── Dados das skills ─────────────────────────────── */
+    const skills = {
+      tecnologias: [
+        { nome: 'JavaScript',          svg: SVG.js },
+        { nome: 'Python',              svg: SVG.python },
+        { nome: 'HTML',                svg: SVG.html },
+        { nome: 'CSS',                 svg: SVG.css },
+        { nome: 'React Native (Expo)', svg: SVG.react },
+        { nome: 'FlutterFlow',         svg: SVG.flutter },
+        { nome: 'Firebase',            svg: SVG.firebase },
+      ],
+      design: [
+        { nome: 'UI/UX Design',            svg: SVG.figma },
+        { nome: 'Prototipação',            svg: SVG.figma },
+        { nome: 'Mobile Development',      svg: SVG.android },
+        { nome: 'Lógica de Programação',   svg: null },
+        { nome: 'Algoritmos & Fluxogramas',svg: null },
+      ],
+      metodologias: [
+        { nome: 'Git & GitHub',                 svg: SVG.git },
+        { nome: 'Versionamento de Código',      svg: SVG.github },
+        { nome: 'Desenvolvimento Colaborativo', svg: null },
+        { nome: 'Kanban',                       svg: null },
+        { nome: 'Pacote Office',                svg: null },
+      ],
+    };
+
+    /* ── Dados dos projetos ──────────────────────────── */
+    const projetos = [
+      {
+        titulo: 'Smart Garden',
+        descricao: 'Monitoramento inteligente de plantas com dados em tempo real, alertas e identificação por IA.',
+        badge: 'TCC',
+        tipo: 'UI/UX • Mobile • IoT',
+        tags: ['Flutter', 'Firebase', 'ESP32'],
+        href: 'smart-garden.html',
+        thumb: './assets/smart-garden/visao-geral.png',
+        thumbAlt: 'Tela de visão geral do aplicativo Smart Garden mostrando o painel de monitoramento de plantas',
+        destaque: true,
+      },
+      {
+        titulo: 'Sistema Inteligente de Quadro de Horários',
+        descricao: 'Sistema acadêmico para geração e gerenciamento de quadros de horários, permitindo cadastrar disciplinas, professores, turmas e gerar automaticamente a distribuição de aulas.',
+        badge: 'Acadêmico',
+        tipo: 'Sistema Web',
+        tags: ['UI/UX', 'Sistema Acadêmico', 'Gestão de Horários'],
+        href: 'quadro-horarios.html',
+        thumb: './assets/quadro-horarios/quadro-gerado.png',
+        thumbAlt: 'Tela do quadro de horários gerado automaticamente pelo sistema, exibindo tabela de aulas por turma',
+        destaque: true,
+      },
+      {
+        titulo: 'Gestão de Leads',
+        descricao: 'Interface de sistema interno para cadastro, acompanhamento e relatórios de leads para faculdade.',
+        badge: 'Acadêmico',
+        tipo: 'UI/UX • Sistema Interno',
+        tags: ['Figma', 'UI/UX', 'Sistema Interno'],
+        href: 'leads.html',
+        thumb: './assets/gestao-leads/dashboard.png',
+        thumbAlt: 'Tela do dashboard do sistema de gestão de leads mostrando eventos e status de acompanhamento',
+        destaque: false,
+      },
+    ];
+
+    /* ── Renderiza cards de skill ────────────────────── */
+    function renderSkills() {
+      const container = document.getElementById('skillsTabContent');
+      const ids = ['tecnologias', 'design', 'metodologias'];
+
+      ids.forEach((id, i) => {
+        const pane = document.createElement('div');
+        pane.className = `tab-pane fade${i === 0 ? ' show active' : ''}`;
+        pane.id = id;
+
+        const row = document.createElement('div');
+        row.className = 'row g-3';
+
+        skills[id].forEach(skill => {
+          const col = document.createElement('div');
+          col.className = 'col-6 col-md-4 col-lg-3';
+
+          const iconHtml = skill.svg
+            ? `<span class="skill-icon" aria-hidden="true">${skill.svg}</span>`
+            : '';
+
+          col.innerHTML = `
+            <div class="card card-soft p-3 lift skill-card">
+              ${iconHtml}
+              <span>${skill.nome}</span>
+            </div>`;
+          row.appendChild(col);
+        });
+
+        pane.appendChild(row);
+        container.appendChild(pane);
+      });
+    }
+
+    /* ── Renderiza cards de projeto ──────────────────── */
+    function criarCard(projeto) {
+      const col = document.createElement('div');
+      col.className = 'col-md-6';
+
+      const tagsHtml = projeto.tags
+        .map(t => `<span class="badge rounded-pill text-bg-light border">${t}</span>`)
+        .join('');
+
+      col.innerHTML = `
+        <div class="card card-soft p-4 h-100 lift">
+          <div class="project-thumb">
+            <img src="${projeto.thumb}" alt="${projeto.thumbAlt}" loading="lazy">
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge rounded-pill badge-accent">${projeto.badge}</span>
+            <span class="text-secondary small">${projeto.tipo}</span>
+          </div>
+          <h4 class="h5 fw-bold mb-2">${projeto.titulo}</h4>
+          <p class="text-secondary-emphasis mb-3">${projeto.descricao}</p>
+          <div class="d-flex flex-wrap gap-2 mb-3">${tagsHtml}</div>
+          <a class="btn btn-accent w-100" href="${projeto.href}">Abrir case</a>
+        </div>`;
+      return col;
+    }
+
+    function renderProjetos() {
+      const featuredEl = document.getElementById('featured-cards');
+      const allEl      = document.getElementById('all-cards');
+
+      projetos.forEach(p => {
+        if (p.destaque) featuredEl.appendChild(criarCard(p));
+        allEl.appendChild(criarCard(p));
+      });
+    }
+
+    renderSkills();
+    renderProjetos();
+  </script>
+
+</body>
+</html>
